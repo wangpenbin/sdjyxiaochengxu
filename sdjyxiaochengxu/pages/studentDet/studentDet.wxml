@@ -1,0 +1,62 @@
+<!--pages/studentDet/studentDet.wxml-->
+<view>
+    <view class='student1'>
+    <view class='student'>
+        <view>姓名：{{data.name}}</view>
+        <view>所学专业：{{data.major.name}}</view>
+    </view>
+    <view class='student'>
+        <view>招生老师：{{data.proxyTeacher.name}}</view>
+        <view>电话：{{data.proxyTeacher.tel}}</view>
+    </view> 
+    <view class='student'>
+        <view>性别：{{data.sexText}}</view>
+        <view>籍贯：{{data.address}}</view>
+    </view>
+     <view class='student'>
+        <view>学习时常：{{data.studyTime}}个月</view>
+        <view>入学时间：{{data.joinTime}}</view>
+    </view>
+     <view class='student'>
+        <view>电话：{{data.tel}}</view>
+        <view>电话：{{data.persons[0].tel}}<text> {{data.persons[0].relation}}</text></view>
+    </view>
+     <view class='student'>
+        <view>学费：{{data.tuition}}元</view>
+        <view>已交学费：{{data.amountTuition}}元</view>
+    </view>  
+     <view class='student'>
+        <view>是否就业：{{data.findJobText}}</view>
+    </view>           
+</view>
+<!-- ------------------------缴费情况 -->
+<view class='student1'>
+    <view >
+        <view class='zi'>缴费情况</view>
+        <view class='jilu'>
+           <view>缴费记录</view> 
+           <view bindtap='paymen' data-id='{{data.id}}'>点击查看详情 ></view>
+        </view>
+    </view>
+</view>
+<!-- ------------------------在校情况 -->
+<view class='student1' style='margin-bottom:0;padding-bottom:60rpx;'>
+    <view >
+        <view class='zi'>在校情况</view>
+        <view class='jilu'>
+           <view>在校考勤</view> 
+           <view bindtap='attend' data-id='{{data.id}}' data-name='{{data.name}}'>点击查看详情 ></view>
+        </view>
+        <view class='jilu'>
+           <view>在校考试成绩</view> 
+           <view bindtap='result' data-id='{{data.id}}' data-name='{{data.name}}'>点击查看详情 ></view>
+        </view>
+        <view class='jilu'>
+           <view>在校谈话记录</view> 
+           <view bindtap='talk' data-id='{{data.id}}' data-name='{{data.name}}'>点击查看详情 ></view>
+        </view>
+    </view>
+</view>
+</view>
+
+

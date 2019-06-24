@@ -1,0 +1,11 @@
+<!--pages/attendance/attendance.wxml-->
+<!-- 成绩页 -->
+<view class='content'>
+    <view class='zi'>姓名：{{name}}</view>
+    <view class='box' wx:for="{{data}}" wx:key>
+       <view class='zi1'>{{item.examDate}}</view> 
+       <view class='box1'>
+          <view>{{item.name}}：{{item.score}}分</view>
+       </view>
+    </view>
+</view>

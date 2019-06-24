@@ -1,0 +1,30 @@
+page{
+  background: #ededed;
+}
+.box{
+  display: flex;
+  flex-wrap:wrap; 
+  margin:0 20rpx; 
+}
+.box_child{
+  width: 48%;
+  margin-bottom:20rpx;
+  background: #fff; 
+  padding-bottom:20rpx; 
+}
+.box_child:nth-child(odd){
+  margin-right:4%; 
+}
+.box_child image{
+  width: 100%;
+  height: 300rpx;
+}
+.zi{
+  font-size:32rpx;
+  padding-left: 20rpx; 
+}
+.zi1{
+  color: #ccc;
+  font-size:28rpx; 
+  padding-left:20rpx; 
+}

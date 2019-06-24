@@ -1,0 +1,74 @@
+<view class="container">
+  <block>
+    <view class="rela-list-item" bindtap='goRelaDetail'>
+      <view style='position:relative;'>上级
+        <view style='position:absolute;top:40rpx;left:-20rpx;width:10rpx;height:40rpx;background:#ccc'></view>
+      </view>
+    <!--   -->
+      <view >
+        <text>姓名 ：{{superior.name}}</text>
+        <text class='zi'>地区 ：{{superior.address}}</text>
+      </view>
+      <view>
+        <text>性别 ：{{superior.sex}}</text>
+        <text>学生数量 ：{{superior.studentCount}}</text>
+      </view>
+      <view style='border:none'>
+        <text>联系电话 ：{{superior.tel}}</text>
+        <text>点位 ：{{superior.point}}%</text>
+      </view>
+    </view>
+    <view bindtap='jump' data-id='{{superior.id}}' class='tadestu'>
+      <text>Ta的学生 ：</text>
+      <text>></text>
+    </view>
+  </block>
+  <block>
+    <view class="rela-list-item" bindtap='goRelaDetail'>
+      <view style='position:relative;'>我的
+        <view style='position:absolute;top:40rpx;left:-20rpx;width:10rpx;height:40rpx;background:#ccc'></view>
+      </view>
+    <!--   -->
+      <view >
+        <text>姓名 ：{{my.name}}</text>
+        <text class='zi'>地区 ：{{my.address}}></text> 
+      </view>
+      <view>
+        <text>性别 ：{{my.sex}}</text>
+        <text>学生数量 ：{{my.studentCount}}</text>
+      </view>
+      <view style='border:none'>
+        <text>联系电话 ：{{my.tel}}</text>
+        <text>点位 ：{{my.point}}%</text>
+      </view>
+    </view>
+    <view bindtap='jump' data-id='{{my.id}}' class='tadestu'>
+      <text>Ta的学生 ：</text>
+      <text>></text>
+    </view>
+  </block>
+  <block wx:for="{{inferiors}}" wx:key="">
+    <view class="rela-list-item" bindtap='goRelaDetail'>
+      <view style='position:relative;'>下级
+        <view style='position:absolute;top:40rpx;left:-20rpx;width:10rpx;height:40rpx;background:#ccc'></view>
+      </view>
+    <!--   -->
+      <view >
+        <text>姓名 ：{{item.name}}</text>
+        <text class='zi'>地区 ：{{my.address}}</text>
+      </view>
+      <view>
+        <text>性别 ：{{item.sex}}</text>
+        <text>学生数量 ：{{item.studentCount}}</text>
+      </view>
+      <view style='border:none'>
+        <text>联系电话 ：{{item.tel}}</text>
+        <text>点位 ：{{item.proxyTeacherPoint.point}}%</text>
+      </view>
+    </view>
+    <view bindtap='jump' data-id='{{item.id}}' class='tadestu'>
+      <text>Ta的学生 ：</text>
+      <text>></text>
+    </view>
+  </block>
+</view>

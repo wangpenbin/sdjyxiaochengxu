@@ -1,0 +1,43 @@
+/* pages/relation/relation.wxss */
+.container{
+  padding:40rpx;
+  /* background:#ccc; */
+}
+.rela-list-item{
+  border-bottom:1px solid #ccc;
+  font-size: 35rpx;
+  margin:10rpx 0;
+ 
+}
+.rela-list-item view{
+   line-height: 120rpx;
+  border-bottom:1px solid #ccc;
+}
+.rela-list-item view text:first-child{
+  display: block;
+  float:left;
+}
+.rela-list-item view text:last-child{
+  display: block;
+ margin-left: 420rpx;
+}
+.tadestu{
+  overflow: hidden;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+}
+.tadestu text{
+  display: block;
+}
+.tadestu text:first-child{
+  float: left;
+}
+.tadestu text:last-child{
+  float: right;
+}
+.zi{
+  height: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

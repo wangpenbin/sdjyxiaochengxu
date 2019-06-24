@@ -1,0 +1,20 @@
+/* pages/payment/payment.wxss */
+page{
+  background-color:#ededed; 
+}
+
+.conent{
+  margin:20rpx; 
+  background-color:#fff;
+  font-size:36rpx; 
+}
+.widts{
+  border-bottom:1px solid #ccc; 
+}
+.zi{
+  color: #333333;
+  padding-left:30rpx;  
+}
+.zi1{
+  padding:30rpx 0 60rpx 80rpx; 
+}

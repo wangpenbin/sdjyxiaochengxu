@@ -1,0 +1,11 @@
+<!--pages/payment/payment.wxml-->
+<!-- 缴费记录 -->
+<view class='conent'>
+    <view class='widts' wx:for="{{data}}" wx:key="index">
+        <view class='zi'>{{item.paymentTime}}</view>
+        <view class='zi1'>
+            <view>缴费：{{item.amount}}元</view>
+            <view>方式：{{item.payment.name}}</view>    
+        </view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view wx:if="{{!hasUserInfo}}" class='top'>
+    <view class="dengru">
+        <button class='button' bindtap='logon'>登录</button>
+    </view> 
+  </view>
+  <view wx:else>
+    <view class="userinfo">
+      <block>
+        <image class='userinfo-avatar' class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode='cover'></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class='userindex'>
+      <view bindtap='getProfiles'>
+        <image src='../../utils/img/ziliao.png'></image>我的资料
+        <text>></text>
+      </view>
+      <view>
+        <image src='../../utils/img/pass.png'></image>绑定手机号
+        <text>></text>
+      </view>
+      <view>
+        <image src='../../utils/img/phon.png'></image>客服热线
+        <text class='ki'>></text>
+        <text class='font_14'>010-86201886</text>
+      </view>
+      <view bindtap='getAbout'>
+        <image src='../../utils/img/about.png'></image>关于我们
+        <text>></text>
+      </view>
+    </view>
+    <view class='OutLog'>
+      <button  bindtap='OutLog'>退出登录</button>
+    </view>
+     
+  </view>
+ 
+</view>

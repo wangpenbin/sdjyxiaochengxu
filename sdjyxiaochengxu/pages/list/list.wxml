@@ -1,0 +1,17 @@
+<!--pages/list/list.wxml-->
+<view>
+   
+      <view class='box'>
+        <view data-id='{{item.id}}' wx:key wx:for="{{list}}" bindtap='sansa' class='box_child'>
+            <image src='{{imgUrl+item.picture}}'></image>
+            <view class='zi'>【{{item.address}}】{{item.name}}</view> 
+        </view>
+      </view>
+        <!-- <image class='chide' src='https://t10.baidu.com/it/u=4192977105,2496959067&fm=76'></image>
+        <image class='chide' src='https://t10.baidu.com/it/u=1110932925,3169355115&fm=76'></image>
+        <image class='chide'></image>
+        <image class='chide'></image>
+        <image class='chide'></image>
+        <image class='chide'></image>
+        <image class='chide'></image> -->
+</view>

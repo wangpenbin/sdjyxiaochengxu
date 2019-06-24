@@ -1,0 +1,35 @@
+page{
+  background: #ededed;
+}
+.content{
+  font-size:32rpx; 
+}
+.zi{
+  padding: 0 40rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom:30rpx; 
+}
+.zi1{
+  line-height: 80rpx;
+  border-bottom:2rpx solid #ccc;
+}
+.box{
+  overflow: hidden;
+  background: #fff;
+  padding: 0 40rpx 60rpx 40rpx;
+  margin-bottom:40rpx; 
+}
+.box1 view{
+  padding-top:30rpx;  
+  width: 450rpx;
+  margin-left:75rpx; 
+  height: 80rpx;
+  font-size:28rpx; 
+}
+
+.right{
+  margin-top:30rpx; 
+  float: right;
+}

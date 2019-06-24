@@ -1,0 +1,36 @@
+/* pages/results/results.wxss */
+page{
+  background: #ededed;
+}
+.content{
+  font-size:32rpx; 
+}
+.zi{
+  padding: 0 40rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom:30rpx; 
+}
+.zi1{
+  line-height: 80rpx;
+  border-bottom:2rpx solid #ccc;
+}
+.box{
+  overflow: hidden;
+  background: #fff;
+  padding: 0 40rpx 60rpx 40rpx;
+  margin-bottom:40rpx;
+ 
+}
+.box1{
+   display: flex; 
+    width: 100%;
+    flex-wrap:wrap; 
+    text-align: center;
+}
+.box1 view{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+}

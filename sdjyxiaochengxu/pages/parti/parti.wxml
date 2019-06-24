@@ -1,0 +1,12 @@
+<!--pages/parti/parti.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view>
+    <view  class='xiangQing'>
+        <view class='biao'>{{count.title}}</view>
+          <view class='size_16'><text class='zi'>{{count.createTime}}</text></view>
+          <view>
+              <!-- <rich-text nodes="{{count.content}}"></rich-text> -->
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+    </view>
+</view>

@@ -1,0 +1,139 @@
+/**index.wxss**/
+.body{
+  widows: 100%;
+  height: 500rpx;
+}
+.img{
+  width: 100%;
+  height: 400rpx;
+}
+.top{
+  position: absolute;
+  top: 3%;
+  left: 20rpx;
+}
+.top .zi_z{
+  text-align: center;
+  font-size:50rpx;
+  color: #fff; 
+  font-weight:300; 
+}
+.top .zi_z1{
+  text-align: center;
+  color: #fff;
+  font-size:38rpx; 
+  margin-top:90rpx; 
+  margin-left:40%;
+  margin-bottom:50rpx;   
+}
+.zi{
+  font-size:40rpx;
+  color: #fff; 
+  margin-bottom:30rpx; 
+  font-weight:700; 
+}
+.search{
+  width: 635rpx;
+  height: 40rpx;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size:34rpx; 
+  border-radius:10rpx;
+  padding: 30rpx 35rpx 35rpx 35rpx;
+  color: #ccc;
+}
+.box{
+  padding:0 20rpx;
+}
+.box_no{
+  width: 100%;
+  overflow: hidden;
+  letter-spacing: 10rpx;
+}
+.box_bor{
+  width:49%; 
+  height: 130rpx;
+  /* 线性渐变 */ 
+  border-radius:10rpx; 
+  float: left;
+  text-align: center;
+  line-height:130rpx; 
+  color: #fff;
+}
+.box_bor:first-child{
+    background:linear-gradient(to right, #446cd9,  #97a3f6);
+    margin-right:2%; 
+}
+.box_bor:last-child{
+    background:linear-gradient(to right, #ae82cd,  #833dc0);
+}
+.zi1{
+ margin:50rpx 0;
+ font-size:24rpx;
+ color: #CCCCCC; 
+}
+.box_txh{
+  display: flex;
+  width: 100%;
+  flex-wrap:wrap; 
+
+}
+.box_flox{
+  width: 48%;
+  overflow: hidden;
+  height: 300rpx;
+  margin-bottom:20rpx; 
+}
+.img1{
+   width: 100%;
+  height:300rpx;
+}
+.box_flox:nth-child(odd){
+    margin-right: 3%; 
+}
+.lat{
+    position: relative;
+    top:-70rpx; 
+    left: 20rpx;
+    color: #fff;
+    height: 0;
+}
+
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+.postion{
+  width:300rpx;
+  height: 200rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top:50%; 
+  background: #ededed;
+  text-align: center;
+}

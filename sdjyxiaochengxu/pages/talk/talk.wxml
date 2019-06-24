@@ -1,0 +1,19 @@
+<!--pages/talk/talk.wxml-->
+<!-- 学生谈话 -->
+<view class='content'>
+    <view class='zi'>姓名：{{name}}</view>
+    <view class='box'>
+       <view class='zi1'>2019年3月25日</view>
+       <view class='box1'>
+         <view>谈话原因：因为2019年3月24日旷课一天，没来上课，也没有请假，态度恶劣</view>
+       </view>
+        <view class='right'>点击查看明细表</view>
+    </view>
+     <view class='box'>
+       <view class='zi1'>2019年2月12日</view> 
+       <view class='box1'>
+          <view>谈话原因：因为2019年3月24日玩游戏</view>
+       </view>
+        <view bindtap='Detail' class='right'>点击查看明细表</view>
+    </view>
+</view>

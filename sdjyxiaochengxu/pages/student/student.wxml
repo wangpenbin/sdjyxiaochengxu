@@ -1,0 +1,14 @@
+<!--pages/student/student.wxml-->
+<view class='content'>
+<block wx:for="{{data}}" wx:key="index">
+     <view class='border'  bindtap='detils' data-id='{{item.id}}'>
+        <view class="left"><image class='img'></image></view>
+        <view class='left'>
+            <view>姓名：{{item.name}}</view>
+            <view>专业：{{item.major.name}}</view>
+            <view>时常：{{item.studyTime}}个月</view>
+        </view>
+        <view class='right'>查看详情>></view>
+      </view>
+</block>
+</view>

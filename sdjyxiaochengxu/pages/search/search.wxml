@@ -1,0 +1,109 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class='box'>
+    <view class='count'>
+         <view class='search'>
+          <view class='search_top'><icon class='icon' type='search' size='12'></icon>搜索</view>
+          <input bindfocus='foucs' bindconfirm='Submit' value='{{value}}' bindinput='InputVal' bindblur='blur'  class='input' type='text'></input>
+          <view wx:if="{{flge}}" class='zi'  bindtap='quxiao'>取消</view>
+          </view>
+      </view>
+    </view>
+    <view>
+    </view>
+    <!-- 中间的蓝字 -->
+    <view wx:if="{{flge1}}" class='middle'>
+        <view class='center'>深度教育</view>
+        <view class='middle1'>
+          <text>学生查询</text>
+          <text class='border'>成绩查询</text>
+          <text>1</text>
+          <text >1</text>
+          <text class='border'>1</text>
+        </view>
+    </view>
+      <!-- 学生查询 -->
+    <view wx:if="{{student}}"  class='students'>
+        <view bindtap="employment" data-id="{{item.id}}" wx:for="{{data}}" wx:key class='student_query'>
+            <image class='' src='{{imgUrl+item.picture}}'></image>
+            <view>【{{item.address}}】{{item.name}}</view>
+        </view>
+    </view> 
+ <!-- 表格 -->
+ <!-- 学费查询 -->
+ <view wx:if="{{xueFei}}"  class='table'>
+ <view  wx:key>
+     <view class='tr'>
+          <view class='th'>姓名</view>
+          <view class='th'>年龄</view>
+          <view class='th'>性别</view>
+          <view class='th'>时长</view>
+          <view class='th'>学历</view>
+      </view>
+      <view class='tr'>
+          <view class='td'>{{data.name}}</view>
+          <view class='td'>{{data.age}}</view>
+          <view class='td'>{{data.sexText}}</view>
+          <view class='td'>{{data.studyTime}}</view>
+          <view class='td'>{{data.education}}</view>
+      </view>
+      <view  class='tr'>
+          <view class='th'>时间</view>
+          <view class='th'>当前总数</view>
+          <view class='th'>已交学费</view>
+          <view class='th'>方式</view>
+          <view class='th'>住宿费用</view>
+      </view>
+      <view  class='tr'>
+          <view class='td'>{{data.joinTime}}</view>
+          <view class='td'>{{data.tuition}}</view>
+          <view class='td'>{{data.amount}}</view>
+          <view class='td'>{{data.payment.name}}</view>
+          <view class='td'>{{data.quarterage}}</view>
+      </view>
+ 
+ </view>
+     
+ </view>
+<!--考勤查询  -->
+  <view wx:if="{{kaoQin}}"  class='table'>
+      <view class='tr'>
+          <view class='th'>学生姓名</view>
+          <view class='th'>迟到次数</view>
+          <view class='th'>旷课次数</view>
+          <view class='th'>正常</view>
+          <!-- <view class='th'>5</view> -->
+      </view>
+      <view wx:for="{{data}}"  wx:for-item="item" wx:key class='tr'>
+          <view class='td'>{{item.studentName}}</view>
+          <view class='td'>{{item.late}}</view>
+          <view class='td'>{{item.absenteeism}}</view>
+          <view class='td'>{{item.normal}}</view>
+          <!-- <view class='td'>5</view> -->
+      </view>
+</view>
+<!-- 成绩查询 -->
+    <view wx:if="{{chengJi}}" class='chengJi'>
+      <view class='table'>
+          <view class='tr'>
+            <view class='th'>姓名</view>
+            <view class='th'>科目</view>
+            <view class='th'>时间</view>
+            <view class='th'>成绩</view>
+          </view>
+           <view class='tr'>
+            <view class='td'>李克</view>
+            <view class='td'>java/h5</view>
+            <view class='td'>1999/2/14</view>
+            <view class='td'>80分</view>
+          </view>
+          <view class='tr'>
+            <view class='td'></view>
+            <view class='td'>java/h5</view>
+            <view class='td'>1999/2/14</view>
+            <view class='td'>80分</view>
+          </view>
+      </view>
+    </view>
+</view>
+<view wx:if="{{NotFound}}">神么没有找到！！！</view>

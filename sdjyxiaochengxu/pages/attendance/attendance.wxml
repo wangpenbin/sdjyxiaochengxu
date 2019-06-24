@@ -1,0 +1,100 @@
+<!--pages/attendance/attendance.wxml-->
+<!-- 考勤页 -->
+<view class='content' >
+    <view class='zi'>姓名：{{name}}</view>
+    <view class='box' wx:for="{{data}}" wx:key="index">
+       <view class='zi1'>{{item.stringWork}}</view> 
+       <view class='box1'>
+          <view>旷课次数：{{item.attenceCount.absenteeism}}次<text>请假次数：{{item.attenceCount.early}}次</text></view>
+          <view>迟到次数：{{item.attenceCount.late}}次<text>未打卡次数：{{item.attenceCount.notSigned}}次</text></view>
+       </view>
+       <view class='right'>点击查看明细表</view>
+    </view>
+</view>
+
+<!--  弹框表格-->
+<view wx:if="{{clck}}" class='boxconent' bindtap='noAlent' >
+<!-- 遮罩层 -->
+</view>
+<view wx:if="{{clck}}" class='boxconent1'>
+    <view class='zi3'>月度汇总表 2017-06-06 至 2019-05-17</view>
+    <view class='zi4'>报表生成时间2017-06-06</view>
+    <scroll-view class='table' scroll-y scroll-x>
+    <view class='table1'>
+  <view class='tr'>
+    <view class='th'>姓名</view>
+    <view class='th'>年龄</view>
+    <view class='th'>工号</view>
+    <view class='th'>出勤天数</view>
+    <view class='th'>休息天数</view>
+    <view class='th'>工作时长</view>
+    <view class='th'>迟到次数</view>
+    <view class='th'>迟到时长</view>
+    <view class='th'>严重迟到天数</view>
+    <view class='th'>严重迟到天数</view>
+    <view class='th'>严重迟到天数</view>
+    <view class='th'>早退次数</view>
+    <view class='th'>早退时长</view>
+    <view class='th'>上班缺卡次数</view>
+    <view class='th'>下班缺卡次数</view>
+    <view class='th'>旷工天数</view>
+  </view>
+   <view class='tr'>
+    <view class='td'>姓名</view>
+    <view class='td'>年龄</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+     <view class='td'>1</view>
+  </view>
+  <view class='tr'>
+    <view class='td'>姓名</view>
+    <view class='td'>年龄</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+     <view class='td'>1</view>
+  </view>
+  <view class='tr'>
+    <view class='td'>姓名</view>
+    <view class='td'>年龄</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+    <view class='td'>1</view>
+    <view class='td'>2</view>
+    <view class='td'>3</view>
+     <view class='td'>1</view>
+  </view>
+</view>
+</scroll-view>
+</view>
+
+

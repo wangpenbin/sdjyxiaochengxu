@@ -1,0 +1,37 @@
+/* pages/about/about.wxss */
+.bigbox{
+ padding: 0 25rpx;
+}
+.box{
+     text-align: center;
+}
+.img{ 
+  width: 400rpx;
+  height: 240rpx;
+}
+.zi{
+  text-indent:2em;
+  margin-top:20rpx;  
+}
+.zi1{
+  font-size:70rpx; 
+  margin:30rpx 0;
+  font-weight: bold;
+  background: linear-gradient(#25baeb,#9bc974 ,#d4d13b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.zi3{
+    padding-left: 20rpx;
+    margin-top:80rpx; 
+
+}
+.zi3 view{
+  margin-top:20rpx; 
+}
+/* --------------------- 
+作者：CarsonWoo 
+来源：CSDN 
+原文：https://blog.csdn.net/CarsonWoo/article/details/89168346 
+版权声明：本文为博主原创文章，转载请附上博文链接！ */

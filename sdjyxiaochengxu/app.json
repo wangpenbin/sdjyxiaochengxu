@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/search/search",
+    "pages/find/find",
+    "pages/my/my",
+    "pages/profile/profile",
+    "pages/about/about",
+    "pages/student/student",
+    "pages/studentDet/studentDet",
+    "pages/attendance/attendance",
+    "pages/results/results",
+    "pages/talk/talk",
+    "pages/payment/payment",
+    "pages/relation/relation",
+    "pages/inrelation/inrelation",
+    "pages/password/password",
+    "pages/parti/parti"
+
+  ],
+  "permission": {},
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "搜索",
+        "iconPath": "utils/img/search.png",
+        "selectedIconPath": "utils/img/search1.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "utils/img/find.png",
+        "selectedIconPath": "utils/img/find1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "utils/img/my.png",
+        "selectedIconPath": "utils/img/my1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

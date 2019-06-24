@@ -1,0 +1,37 @@
+/* pages/student/student.wxss */
+page{
+  background: #ededed;
+}
+.content{
+  padding: 0 40rpx;
+  background: #fff;
+}
+.img{
+  height:200rpx;
+  border: 1px solid #ccc; 
+  width: 210rpx;
+  float:  left;
+}
+.border{
+  padding-bottom:30rpx; 
+  overflow: hidden;
+  border-bottom:1px solid #ccc;
+  margin-bottom:40rpx;  
+}
+.border:last-child{
+  border: none;
+}
+.left{
+  font-size:30rpx; 
+  float: left;
+  margin-left:20rpx; 
+}
+.left view{
+  line-height: 70rpx;
+}
+.right{
+  margin-top:150rpx; 
+  float: right;
+  font-size:28rpx;
+  color: #999999; 
+}

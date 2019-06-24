@@ -1,0 +1,22 @@
+/* pages/parti/parti.wxss */
+
+.xiangQing{
+  width: 93%;
+  margin: 0 auto; 
+}
+.biao{
+  font-weight:700; 
+  font-size:40rpx; 
+}
+image{
+  width: 100%;
+  height: 300rpx;
+}
+.size_16{
+  margin-top:20rpx; 
+  font-size:32rpx;
+  margin-bottom:40rpx;  
+}
+.zi{
+  color: rgb(139, 60, 241)
+}
