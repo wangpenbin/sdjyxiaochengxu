@@ -41,6 +41,7 @@ page{
 }
 .zi{
   font-size:32rpx; 
+  text-align: center;
 }
 .zi2{
   padding-left:20rpx; 

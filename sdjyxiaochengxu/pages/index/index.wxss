@@ -1,7 +1,7 @@
 /**index.wxss**/
 .body{
   widows: 100%;
-  height: 500rpx;
+  height: 470rpx;
 }
 .img{
   width: 100%;
@@ -39,53 +39,55 @@
   background: #fff;
   font-size:34rpx; 
   border-radius:10rpx;
-  padding: 30rpx 35rpx 35rpx 35rpx;
+  padding: 30rpx 40rpx 35rpx 35rpx;
   color: #ccc;
 }
 .box{
   padding:0 20rpx;
 }
 .box_no{
-  width: 100%;
-  overflow: hidden;
+  width: 98%;
+  margin: 20rpx auto 50rpx auto;
   letter-spacing: 10rpx;
 }
 .box_bor{
-  width:49%; 
+  width:48%; 
   height: 130rpx;
   /* 线性渐变 */ 
-  border-radius:10rpx; 
-  float: left;
+  border-radius:10rpx;
   text-align: center;
   line-height:130rpx; 
   color: #fff;
 }
 .box_bor:first-child{
     background:linear-gradient(to right, #446cd9,  #97a3f6);
-    margin-right:2%; 
+    float: left;
 }
 .box_bor:last-child{
     background:linear-gradient(to right, #ae82cd,  #833dc0);
+    float: right;
 }
-.zi1{
+/* .zi1{
  margin:50rpx 0;
  font-size:24rpx;
  color: #CCCCCC; 
-}
+} */
 .box_txh{
   display: flex;
   width: 100%;
-  flex-wrap:wrap; 
+  flex-wrap: wrap;
+  /* 弹性盒子里的子元素水平方向效果 */
+  justify-content: space-around;
 
 }
 .box_flox{
   width: 48%;
-  overflow: hidden;
-  height: 300rpx;
+  overflow:hidden;
+  height: 260rpx;
   margin-bottom:20rpx; 
 }
 .img1{
-   width: 100%;
+  width: 100%;
   height:300rpx;
 }
 .box_flox:nth-child(odd){
@@ -93,7 +95,7 @@
 }
 .lat{
     position: relative;
-    top:-70rpx; 
+    top:-120rpx; 
     left: 20rpx;
     color: #fff;
     height: 0;

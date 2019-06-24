@@ -8,10 +8,9 @@
           <view>技术改造命运</view>
           <view>打造万元高薪工程师</view>
       </view>
-      <!-- <view class='zi'>深度创远</view> -->
       <view bindtap='bigSearch' class='search'>
           <view style='float:left;font-size:32rpx'>搜索学生或就业信息</view>
-        <image src='../../utils/img/search.png' style='width:50rpx;height:50rpx;float:right'></image>
+          <image src='../../utils/img/search.png' style='width:50rpx;height:50rpx;float:right'></image>
       </view>
     </view>
   </view>
@@ -20,7 +19,7 @@
       <view bindtap='cengji' class='box_bor'>上下层级</view>
       <view bindtap='student' class='box_bor'>我的学生</view>
     </view>
-    <view class='zi1'></view>
+    <!-- <view class='zi1'></view> -->
     <view class='box_txh' >
       <view bindtap='{{item.tap}}' wx:for="{{img}}" data-code='{{item.id}}'  key="index" class='box_flox'>
         <image class='img1' src="{{item.img}}"></image>

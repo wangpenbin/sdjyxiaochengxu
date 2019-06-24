@@ -4,16 +4,17 @@
   <view class='content'>
     <text class='zi'>就业详情</text>
       <view class='heit' wx:key wx:for="{{data}}" data-address="{{key}}" wx:for-item="val" wx:for-index="key" bindtap='list'>
+          <view class='top'>
+            <view class='left'><text>{{key}}</text></view>
+            <button class='right' size='mini'>更多</button>
+          </view>
          <view  class='float_no'>
             <view wx:for="{{val}}" wx:key>
                  <image class='img' src='{{item.picture}}'></image>
                  <view>{{item.name}}</view>
             </view>
         </view>
-      <view class='top'>
-        <view class='left'><text>{{key}}</text></view>
-        <button class='right' size='mini'>更多</button>
-      </view>
+      
       </view> 
    </view>
  

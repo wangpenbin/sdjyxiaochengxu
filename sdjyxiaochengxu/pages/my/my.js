@@ -16,6 +16,40 @@ Page({
   //事件处理函数
   onLoad: function () {
     console.log()
+<<<<<<< HEAD
+=======
+    var that= this;
+   wx.getStorage({
+     key: 'key',
+     success: function(res) {
+       console.log(res)
+      that.setData({
+        token:res.data
+      })
+       if(res.data==''){
+         this.data.hasUserInfo=true;
+      }
+       wx.request({
+         url: 'http://192.168.31.163:8080/proxy_manage/appNew/getProxyTeacher2',
+         method: "POST",
+         data: {
+           token: res.data
+         },
+         header: {
+           'content-type': 'application/x-www-form-urlencoded',// 默认值
+         },
+         success(res) {
+           console.log(res)
+           wx.setStorage({
+             key: 'UserId',
+             // 保存招生老师id
+             data: res.data.data.id,
+           })
+         }
+       })
+     },
+   })
+>>>>>>> 059ff753e9ba4fce446ee7683a2dc9501b429abe
    
     var that = this;
     wx.getStorage({
