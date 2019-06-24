@@ -2,7 +2,7 @@
 <view>
   <view wx:if="{{!hasUserInfo}}" class='top'>
     <view class="dengru">
-        <button class='button' bindtap='logon'>登录</button>
+        <button  class='button' bindtap='logon'>登录</button>
     </view> 
   </view>
   <view wx:else>
@@ -31,10 +31,6 @@
         <text>></text>
       </view>
     </view>
-    <view class='OutLog'>
-      <button  bindtap='OutLog'>退出登录</button>
-    </view>
-     
   </view>
  
 </view>

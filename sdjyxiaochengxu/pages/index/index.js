@@ -11,29 +11,59 @@ Page({
         { id: 3, img: "../../utils/img/tu4.png", "text": "考勤查询", "tap":"search"},
         { id: 4, "img": '../../utils/img/tu5.jpg', "text": "成绩查询", "tap":"search"},
         { id: 5, "img":"../../utils/img/tu6.jpg","text":"敬请期待"}],
+    token:"",
         
   },
   onLoad: function () {
+    var that =this;
+   wx.getStorage({
+     key: 'key',
+     success: function(res) {
+       console.log(res.data)
+      that.setData({
+        token:res.data
+      })
+     },
+   })
+   
   },
   bindGetUserInfo(e) {
     console.log(e.detail.userInfo)
   },
   student() {
-    // 跳到学生页
-    wx.navigateTo({
-      url: '../student/student',
-    })
+    // 我的学生
+    if (this.data.token!=""){
+      wx.navigateTo({
+        url: '../student/student',
+      })
+    }else{
+        wx.showToast({
+          title: '请登录后查看',
+          icon:"none"
+        })
+    }
+   
+  },
+  cengji() {
+    // 上下层级
+    if(this.data.token!=""){
+      wx.navigateTo({
+        url: '../inrelation/inrelation',
+      })
+    }else{
+      wx.showToast({
+        title: '请登录后查看',
+        icon: "none"
+      })
+    }
+   
   },
   bigSearch(){
     wx.navigateTo({
       url: '../search/search?code='+"-1",
     })
   },
-  cengji() {
-    wx.navigateTo({
-      url: '../inrelation/inrelation',
-    })
-  },
+ 
   search(e){
     console.log(e.currentTarget.dataset.code)
     wx.navigateTo({

@@ -7,54 +7,49 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    flage:false,
+    flage: false,
     hasUserInfo: false,
-    pass:"",
+    pass: "",
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    token:""
+    token: ""
   },
   //事件处理函数
   onLoad: function () {
     console.log()
-    if (!wx.getStorageInfoSync().keys[2]){
-        this.setData({
-          hasUserInfo:false
-        })
-        return false;
-    }
-    var that= this;
-   wx.getStorage({
-     key: 'key',
-     success: function(res) {
-       console.log(res)
-      that.setData({
-        token:res.data
-      })
-       if(res.data==''){
-         this.data.hasUserInfo=true;
-      }
-       wx.request({
-         url: 'http://192.168.31.163:8080/proxy_manage/appNew/getProxyTeacher2',
-         method: "POST",
-         data: {
-           token: res.data
-         },
-         header: {
-           'content-type': 'application/x-www-form-urlencoded',// 默认值
-         },
-         success(res) {
-           console.log(res)
-           wx.setStorage({
-             key: 'UserId',
-             // 保存招生老师id
-             data: res.data.data.id,
-           })
-         }
-       })
-     },
-   })
    
-    if (this.data.userInfo=="" && this.data.hasUserInfo==false &&this.data.token==''){
+    var that = this;
+    wx.getStorage({
+      key: 'key',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          token: res.data
+        })
+        if (res.data == '') {
+          that.data.hasUserInfo = false;
+        }
+        wx.request({
+          url: 'http://192.168.31.163:8080/proxy_manage/appNew/getProxyTeacher2',
+          method: "POST",
+          data: {
+            token: res.data
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded',// 默认值
+          },
+          success(res) {
+            console.log(res)
+            wx.setStorage({
+              key: 'UserId',
+              // 保存招生老师id
+              data: res.data.data.id,
+            })
+          }
+        })
+      },
+    })
+
+    if (this.data.userInfo == "" && this.data.hasUserInfo == false && this.data.token == '') {
       this.logon();
     }
     if (app.globalData.userInfo) {
@@ -77,27 +72,27 @@ Page({
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
-          if(wx.getStorageInfoSync('key')){
+          if (wx.getStorageInfoSync('key')) {
             this.setData({
               userInfo: res.userInfo,
               hasUserInfo: true
             })
           }
-         
+
         }
       })
     }
   },
-  onShow(){
+  onShow() {
     this.onLoad();
   },
-  OutLog(){
-   this.setData({
-     hasUserInfo:false
-   })
-    wx.removeStorage({       
+  OutLog() {
+    this.setData({
+      hasUserInfo: false
+    })
+    wx.removeStorage({
       key: 'key',
-      success: function(res) {},
+      success: function (res) { },
     })
   },
   logon(e) {
@@ -108,17 +103,17 @@ Page({
   },
   // 资料页
   getProfiles() {
-    if (this.data.userInfo != '' && this.data.hasUserInfo==true){
+    if (this.data.userInfo != '' && this.data.hasUserInfo == true) {
       wx.navigateTo({
         url: '../profile/profile',
       })
       return false;
-    }else{
+    } else {
       wx.showModal({
-      //  title:"请登录",
-        content:"请登录或绑定手机号后查看",
-        showCancel:false
-     })
+        //  title:"请登录",
+        content: "请登录或绑定手机号后查看",
+        showCancel: false
+      })
     }
   },
   getAbout() {
@@ -126,7 +121,7 @@ Page({
       url: '../about/about',
     })
   },
-  getUserInfo: function(e){
+  getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -134,4 +129,3 @@ Page({
     })
   }
 })
-
