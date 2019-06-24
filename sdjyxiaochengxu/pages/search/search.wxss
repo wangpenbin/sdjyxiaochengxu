@@ -10,22 +10,19 @@ page{
   height: 60rpx;
   border-radius:8rpx;
 }
-.search_top{
-  padding:0 20rpx 0 20rpx; 
+.search image{
+  width: 50rpx;
+  height: 50rpx;
   float: left;
-  color: #ccc;
-  font-size:32rpx; 
-  padding-top:4rpx; 
+  margin: 7rpx;
 }
-.icon{
-  margin-right:5rpx;
-  margin-top:10rpx;    
-}
+
 .input{
-  width: 460rpx;
+  width:500rpx;
   float: left;
   height: 60rpx;
   border-radius:6rpx;
+  padding-left: 200upx;
 }
 .zi{
   float: right;
@@ -42,6 +39,8 @@ page{
 .table{
   margin:0 auto; 
   width: 96%;
+  border:1px solid #dadada;
+
 }
 .table .tr{
   background: #FFFFFF;
@@ -52,7 +51,7 @@ page{
   justify-content: right;
 }
 .th{
-  font-size: 34rpx;
+  font-size: 18rpx;
   text-align: center;
   width: 20%;
   border:1px solid #ccc;
@@ -63,6 +62,9 @@ page{
   width: 20%;
   font-size:26rpx; 
   border:1px solid #ccc;
+}
+.tr-bor-top-none{
+  border-top:none;
 }
 .middle{
   margin:0 auto;

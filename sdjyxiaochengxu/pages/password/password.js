@@ -10,6 +10,7 @@ Page({
   data: {
     flag: false,
     image:"",
+    name:"",
     passworld: "密码",
     qiehuan: "用密码登录",
     placeholder: "确认密码",
@@ -20,6 +21,8 @@ Page({
     code: "", //密码或验证的值 
     errorText: "", //错误提示文字
   },
+  
+  
   // 验证码和密码切换
   qiehuan() {
     var flag = this.data.flag
@@ -86,6 +89,7 @@ Page({
       }, 1000)
     }
   },
+  //接受微信图片
   onLoad() {
     this.setData({
       image: app.globalData.userInfo.avatarUrl
