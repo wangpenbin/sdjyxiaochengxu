@@ -16,12 +16,6 @@ Page({
   //事件处理函数
   onLoad: function () {
     console.log()
-    if (!wx.getStorageInfoSync().keys[2]){
-        this.setData({
-          hasUserInfo:false
-        })
-        return false;
-    }
     var that= this;
    wx.getStorage({
      key: 'key',

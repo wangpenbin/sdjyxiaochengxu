@@ -2,6 +2,7 @@
 <view>
   <view wx:if="{{!hasUserInfo}}" class='top'>
     <view class="dengru">
+        <text style='text-align: center;di'>请登录后查看您的信息</text>
         <button class='button' bindtap='logon'>登录</button>
     </view> 
   </view>
